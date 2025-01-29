@@ -1,0 +1,13 @@
+.LoginForm {
+    display: flex;
+    width: 20%;
+    box-shadow: 1px 1px 1px 1px black; 
+    flex-direction: column;
+    text-align: center;
+    padding: 4%;
+}
+
+.LoginForm form {
+    display: flex;
+    flex-direction: column;
+}
