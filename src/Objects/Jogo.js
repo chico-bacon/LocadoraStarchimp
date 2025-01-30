@@ -1,16 +1,5 @@
-let jogos = [];
-
-let jogo = {
-    id: '',
-    titulo: '',
-    tipo: '',
-    dataLancamento: '',
-    descricao:'',
-    status: 'disponivel'
+class Jogo {
+    constructor (titulo, lancamento, genero, idade) {
+        this.
+    }
 }
-
-function adicionar() {}
-
-function atualizar() {}
-
-function deletar() {}

@@ -1,16 +1,17 @@
-import { useState } from "react"
 
-function TextInput(props) {
-    const [info, setInfo] = useState('');
+function TextInput({id, label, value, setValue}) {
+
     return (
         <div>
-            <label for={props.id}>{props.label}</label>
+            <label for={id}>{label}</label>
             <input
-            id={props.id}
+            id={id}
             type="text"
+            value={value}
+            onChange={event => setValue(event.target.value)}
             />
         </div>
     )
-}
+};
 
 export default TextInput

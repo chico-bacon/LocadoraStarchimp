@@ -1,18 +1,17 @@
-import { useState } from "react"
 
-function PassInput(props) {
-    const [pass, setPass] = useState('');
+function PassInput({id, label, value, setValue}) {
 
     return (
         <div>
-            <label for={props.id}>{props.label}</label>
+            <label for={id}>{label}</label>
             <input
-            id={props.id}
-            value={pass}
+            id={id}
             type="password"
-            onChange={event => {setPass(pass = event.target.value)}}
+            value={value}
+            onChange={event => setValue(event.target.value)}
             />
         </div>
+
     )
 };
 

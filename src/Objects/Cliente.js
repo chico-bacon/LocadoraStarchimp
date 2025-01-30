@@ -1,18 +1,29 @@
 
-let clientes = [];
+class Client {
+    clients = []
 
-function cadastrar() {
-    let cliente = {
-        id:"",
-        nome: "",
-        email: "",
-        dataNascimento: "",
-        Endereco: "",
-        senha: ""
+    constructor (id, name, email, pass, address) {
+        this.id = id
+        this.name = name;
+        this.email = email;
+        this.pass = pass;
+        this.address = address;
+    }
+
+    StoreClient(client) {
+        this.clients.push(client)
+        console.log('Cliente Cadastrado com Sucesso!')
+    }
+
+    ClientLogin(email, pass) {
+        const account = this.clients.find((client) => client.email == email && client.pass == pass);
+        console.log(account);
+    }
+
+    ShowClients() {
+        return this.clients
     }
 
 }
 
-function logar() {
-
-}
+export default Client
